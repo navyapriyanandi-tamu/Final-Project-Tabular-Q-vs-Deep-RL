@@ -2,6 +2,8 @@
 
 This project implements and compares a range of **tabular** and **deep reinforcement learning** algorithms for multi-asset portfolio allocation. All agents operate in a unified Gym-style trading environment with **transaction costs**, **drawdown penalties**, and consistent **walk-forward data splits**. The framework supports training, evaluation, stability studies, market-regime analysis, and exploration sensitivity experiments.
 
+Video link: https://youtu.be/apLHMZZECII
+
 ---
 
 ## Project Overview
