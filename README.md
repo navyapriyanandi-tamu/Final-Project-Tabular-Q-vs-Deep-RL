@@ -4,7 +4,7 @@ This project implements and compares a range of **tabular** and **deep reinforce
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 The goal is to understand how different RL methods behave in realistic financial conditions.
 
@@ -28,7 +28,7 @@ The project includes:
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Clone the repository
 
@@ -53,60 +53,70 @@ source venv/bin/activate
 pip install -r requirements_modern.txt
 ```
 
-Running Experiments
-Train Tabular RL Agents
+## Running Experiments
+### Train Tabular RL Agents
 
-Bash
+```bash
 
 python train_q_learning.py
 python train_double_q_learning.py
 python train_ucb_q_learning.py
-Train Deep RL Agents
-Bash
-
+```
+### Train Deep RL Agents
+```bash
 python train_ddpg.py
 python train_td3.py
 python train_ppo.py
-Run Full Multi-Agent Comparison
-Bash
+```
+
+### Run Full Multi-Agent Comparison
+```bash
 
 python compare_strategies.py
-Market Benchmark Comparison
-Bash
+```
 
+### Market Benchmark Comparison
+```bash
 python plot_vs_market.py
-Multi-Seed Stability Evaluation
-Bash
+```
 
+### Multi-Seed Stability Evaluation
+
+```bash
 python stability_study/stability_study_tabular.py
 python stability_study/stability_study_deep_rl.py
-Exploration / Reward Scaling Sensitivity
-Bash
+```
 
+### Exploration / Reward Scaling Sensitivity
+
+```bash
 python exploration_analysis.py
-Core RL Modules (Inside agents/)
-q_learning.py, double_q_learning.py, ucb_q_learning.py: Tabular RL algorithms and exploration logic
+```
 
-baselines.py: Portfolio baselines: Equal-Weight, Cash, Momentum
 
-discrete_actions.py: Maps continuous portfolio weights to a discrete rebalancing grid
+## Core RL Modules (Inside `agents/`)
 
-state_discretizer.py: Converts raw market observations into discrete RL states
+* **`q_learning.py`, `double_q_learning.py`, `ucb_q_learning.py`**: Tabular RL algorithms and exploration logic
+* **`baselines.py`**: Portfolio baselines: Equal-Weight, Cash, Momentum
+* **`discrete_actions.py`**: Maps continuous portfolio weights to a discrete rebalancing grid
+* **`state_discretizer.py`**: Converts raw market observations into discrete RL states
+* **`reward_shaper.py`**: Adds transaction costs and drawdown penalties into reward signals
+* **`sb3_wrapper.py`**: Unified wrapper for SB3 deep RL agents to match the tabular interface
 
-reward_shaper.py: Adds transaction costs and drawdown penalties into reward signals
+---
 
-sb3_wrapper.py: Unified wrapper for SB3 deep RL agents to match the tabular interface
+## Market Regime Testing
 
-Market Regime Testing
 Synthetic datasets are included to test robustness across different environments:
 
-poloniex_30m_test_dummy_bullish.hf
-
-poloniex_30m_test_dummy_neutral.hf
-
-poloniex_30m_test_dummy_bearish.hf
+* `poloniex_30m_test_dummy_bullish.hf`
+* `poloniex_30m_test_dummy_neutral.hf`
+* `poloniex_30m_test_dummy_bearish.hf`
 
 These allow evaluating how agents behave in up-trending, sideways, and down-trending markets.
 
-License & Citation
-This project is intended for academic and research use. If you use or extend this work, please cite the repository and the original Poloniex dataset source.
+---
+
+## License & Citation
+
+This project is intended for **academic and research use**. If you use or extend this work, please cite the repository and the original Poloniex dataset source.
