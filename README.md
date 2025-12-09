@@ -41,7 +41,7 @@ git clone https://github.com/navyapriyanandi-tamu/Final-Project-Tabular-Q-vs-Dee
 ### 2. Navigate into the project folder
 ```bash
 
-cd DRL-Project
+cd Final-Project-Tabular-Q-vs-Deep-RL
 ```
 ### 3. Create and activate a virtual environment
 ```bash
