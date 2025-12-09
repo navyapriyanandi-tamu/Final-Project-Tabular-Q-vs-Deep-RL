@@ -96,7 +96,7 @@ python exploration_analysis.py
 ```
 
 
-## Core RL Modules (Inside `agents/`)
+## Core RL Modules (Inside `rl_portfolio_management/`)
 
 * **`q_learning.py`, `double_q_learning.py`, `ucb_q_learning.py`**: Tabular RL algorithms and exploration logic
 * **`baselines.py`**: Portfolio baselines: Equal-Weight, Cash, Momentum
