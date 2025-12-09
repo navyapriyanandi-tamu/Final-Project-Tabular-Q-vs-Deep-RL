@@ -120,3 +120,4 @@ These allow evaluating how agents behave in up-trending, sideways, and down-tren
 ## License & Citation
 
 This project is intended for **academic and research use**. If you use or extend this work, please cite the repository and the original Poloniex dataset source.
+This work was inspired by and structurally adapted from [wassname/rl-portfolio-management](https://github.com/wassname/rl-portfolio-management).
